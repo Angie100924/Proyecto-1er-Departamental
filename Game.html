@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RunnerJS - Juego Dinosaurio</title>
+  <link rel="stylesheet" href="Game.css" />
+</head>
+<body>
+  <header class="game-header">
+    <h1>RunnerJS</h1>
+    <nav>
+      <button id="showLeaderboardBtn">Leaderboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <canvas id="gameCanvas" width="900" height="300" aria-label="Canvas del juego"></canvas>
+
+    <div id="hud">
+      <div>Puntuación: <span id="score">0</span></div>
+      <div>Nivel: <span id="level">1</span></div>
+      <div>Máximo: <span id="highscore">0</span></div>
+    </div>
+
+    <div id="gameOverPanel" class="hidden" role="dialog" aria-modal="true">
+      <h2>GAME OVER</h2>
+      <p>Tu puntuación: <span id="finalScore">0</span></p>
+      <p>Nivel alcanzado: <span id="finalLevel">1</span></p>
+      <label>
+        Nombre:
+        <input id="playerName" maxlength="20" placeholder="Tu nombre" />
+      </label>
+      <div class="buttons">
+        <button id="saveScoreBtn">Guardar puntuación</button>
+        <button id="restartBtn">Reiniciar</button>
+      </div>
+    </div>
+
+    <aside id="leaderboardPanel" class="hidden" aria-hidden="true">
+      <h2>Leaderboard - Top 10</h2>
+      <ol id="scoresList"></ol>
+      <button id="closeLeaderboardBtn">Cerrar</button>
+    </aside>
+  </main>
+
+  <script src="Api.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

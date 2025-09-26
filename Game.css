@@ -1,0 +1,108 @@
+:root {
+  --bg: #f4f6f8;
+  --accent: #f379e3;
+  --danger: #31a9e0;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:100vh;
+}
+
+.game-header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  background:#b245dd;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+main{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:18px;
+  width:100%;
+  max-width:1100px;
+}
+
+#gameCanvas{
+  border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg,#fff 0%, #f0f6ff 100%);
+}
+
+#hud{
+  display:flex;
+  gap:18px;
+  margin-top:12px;
+  font-weight:600;
+  font-size:16px;
+}
+
+.hidden { display:none !important; }
+
+#gameOverPanel{
+  margin-top:14px;
+  background:white;
+  border-radius:8px;
+  padding:16px;
+  box-shadow:0 8px 24px rgba(193, 99, 236, 0.774);
+  text-align:center;
+  width:320px;
+}
+
+#gameOverPanel input{
+  width:100%;
+  padding:8px;
+  margin-top:8px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+#gameOverPanel .buttons{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-top:10px;
+}
+
+#gameOverPanel button,
+#leaderboardPanel button,
+button#showLeaderboardBtn{
+  padding:8px 12px;
+  border-radius:6px;
+  border:0;
+  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+}
+
+#leaderboardPanel{
+  position:fixed;
+  right:18px;
+  top:80px;
+  width:320px;
+  max-height:70vh;
+  overflow:auto;
+  background:white;
+  padding:12px;
+  border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+}
+
+#scoresList { padding-left:18px; }
+#scoresList li { margin-bottom:8px; }

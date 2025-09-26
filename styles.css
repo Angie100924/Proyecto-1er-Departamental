@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f6f7;
+  color: #333;
+}
+
+.site-header {
+  background: #9c34b1;
+  color: white;
+  padding: 10rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.site-header h1 {
+  margin: 0;
+   font-size: 5rem;
+}
+
+.site-header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#practicas h2 {
+  font-size: 2rem;
+  }
+
+.cards-container {
+  padding: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border: 4px solid #ae3bc5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card.especial {
+  border: 4px solid #ae3bc5;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #9c34b1;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  background: #9c34b1;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
